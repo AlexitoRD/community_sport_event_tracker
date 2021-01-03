@@ -1,4 +1,4 @@
-import 'package:community_sport_event_tracker/login_page/login_page.dart';
+import 'package:community_sport_event_tracker/authentication_page/authentication_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: LoginPage(),
+      body: AuthenticationPage(),
     );
   }
 }
