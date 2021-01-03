@@ -1,7 +1,10 @@
 import 'package:community_sport_event_tracker/authentication_page/authentication_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(
     MyApp(),
   );
