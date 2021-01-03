@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "2398285603",
+    "project_id": "community-sports-event-tracker",
+    "storage_bucket": "community-sports-event-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2398285603:android:922bb03a15d249b8566696",
+        "android_client_info": {
+          "package_name": "com.alex.community_sport_event_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2398285603-m4dgsopb5gsaganr6hgvb1lr0eksm18d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx5OOTRTXfaC7trVay5fjUQUU9fmHXWeg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2398285603-m4dgsopb5gsaganr6hgvb1lr0eksm18d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
