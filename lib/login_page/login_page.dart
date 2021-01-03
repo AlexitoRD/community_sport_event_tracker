@@ -7,6 +7,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  var isRegistering = false;
+  var passwordObscured = true;
+  var passwordConfirmationObscured = true;
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -23,7 +27,39 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             width: width * 0.6,
             child: TextFormField(
-              decoration: InputDecoration(labelText: 'Password'),
+              obscureText: passwordObscured,
+              decoration: InputDecoration(
+                labelText: 'Password',
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.remove_red_eye),
+                  onPressed: () {
+                    setState(() {
+                      passwordObscured = !passwordObscured;
+                    });
+                  },
+                ),
+              ),
+            ),
+          ),
+          Visibility(
+            visible: isRegistering,
+            child: Container(
+              width: width * 0.6,
+              child: TextFormField(
+                obscureText: passwordConfirmationObscured,
+                decoration: InputDecoration(
+                  labelText: 'Confirm Password',
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.remove_red_eye),
+                    onPressed: () {
+                      setState(() {
+                        passwordConfirmationObscured =
+                            !passwordConfirmationObscured;
+                      });
+                    },
+                  ),
+                ),
+              ),
             ),
           ),
           Row(
@@ -32,7 +68,9 @@ class _LoginPageState extends State<LoginPage> {
               FlatButton(
                 child: Text('Register'),
                 onPressed: () {
-                  print('Register');
+                  setState(() {
+                    isRegistering = !isRegistering;
+                  });
                 },
               ),
               FlatButton(
